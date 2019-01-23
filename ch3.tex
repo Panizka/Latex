@@ -1,0 +1,28 @@
+\chapter{Incorporating Robustness in DROP}
+
+Consider the following formula:
+
+\vspace{5mm}\noindent\textbf{Robust DROP} \\
+\textit{Initialization:} $x(0) \in \mathfrak{R}^n$ \textit{is arbitrary.}\\
+\textit{Iterative Step: Given $x(k)$, }
+\begin{align} \label{alg:1}
+         x({k+1}) &= x(k) + \lambda_k S_k \sum_{i \in I_{t(k)}} \sum_{j} \frac{b_i - \langle A_i,x(k) \rangle}{\|A_i\|^2 \pm \beta_{i,j}} a_i 
+         \\
+         \beta_{i,j} &= (1 - {x(k)}_{j}) \eta
+\end{align}
+
+In order to asses the outcome of Robust DROP and compare it with DROP, three experiments are performed as follows: In the first experiment, we have used the matrix $A$ resulting from the MLP calculations, in the second experiment, we have added some Gaussian noise with zero mean and $\eta^2$ variance to each nonzero element of $A$ to produce 
+\begin{align} \label{eq:2.1}
+    \phantom{i + j + k}
+    &\begin{aligned}
+        A_{error} = A_{MLP} + \eta * N(0,1).
+    \end{aligned}
+\end{align}
+Finally, in the third experiment, we have randomly removed $120000$ of the histories from the data set and compared Robust DROP with DROP. This experiment simulates the situation that during a scan, the rate at which protons have been shot towards the object is higher than the processing rate of  recording the histories, thus some of the protons are missed during the scan. This could lead to an uncertain path matrix, and therefore inaccurate RSPs during the reconstruction.
+
+
+
+
+
+
+

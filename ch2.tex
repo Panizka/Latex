@@ -1,0 +1,36 @@
+\chapter{Current General and Robust Formulations}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5.5cm,height=5.5cm]{baylor.png}
+\vspace{-3mm}
+\caption[Baylor logo]{Baylor logo}
+\label{fig:1}
+\end{figure}
+
+
+
+
+\begin{table}[th]
+%\vspace{-17.5em}
+\caption{Sample table.}
+\label{t:1}
+\centering
+\begin{tabular}{ccc}
+\hline
+Term & Definition & Chapter  \\ \hline
+$A$ & $m \times n$ matrix containing protons path information & $2,3,4$\\    
+$b$ & $m \times l$ vector containing the WEPL information of protons& $2,3,4$ \\ 
+$x$ & $n \times 1$ vector to be reconstructed containing the RSP values & $2,3,4$ \\    
+$H_i$ & Set of hyper-planes or $\{ x | A_i^T x = b_i \}$, $i = 1, 2, \dots, m$ & $2,4$ \\
+$A_i$ & $i^{th}$ row of  matrix $A$ & $2,3,4$ \\    
+$a_{i,j}$ & An element form $i^{th}$ row and $j^{th}$ column of $A$ matrix  & $2,3,4$ \\    
+$x(k)$ & $x$ vector at $k^{th}$ iteration of the iterative solver & $2,3,4$ \\   
+${x(k)}_j$ & $j^{th}$ element of vector $x(k)$  & $3$ \\
+$\lambda_k$ & Relaxation parameter used by the iterative solver at $k^{th}$ iteration & $2,3,4$ \\ 
+$I_{t(k)}$ & A block of the original system of linear equations $Ax = b$ & $2,3$\\
+$S$ & $S = diag(s_j^{-1})$ of size $n \times n$ & $2,3$ \\ 
+$s_j$ &  $\#$ of times voxel $j$ is intersected by path $i \in I_{t(k)}$ & $2,3$ \\ \hline
+\end{tabular}
+\end{table}
+

@@ -1,0 +1,101 @@
+% Baylor University Master's Thesis LaTeX template
+% Template created by Jonathan Drake (2013)
+
+% Thesis class, based on report
+\documentclass
+[
+	%short,	% omit front matter
+	%draft, 	% draft heading, don't load graphics, etc.
+]
+{thesis}
+
+% Optional additional packages
+\usepackage{float}
+\usepackage{setspace}
+\usepackage[bottom]{footmisc}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+}
+\usepackage{amssymb}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chicago}
+\usepackage{lipsum} % Because this comes with a demo
+\usepackage{hyperref}  % for workin links and bookmarks (alexsalo)
+\usepackage{bookmark}  % faster bookmarks manegment (alexsalo)
+\usepackage{makecell}
+\usepackage{algorithm}
+\usepackage{cite}
+\usepackage[noend]{algpseudocode}
+% Thesis parameters
+\title{Robust and Efficient Methods for Proton Computed Tomography}
+\author{Paniz Karbasi}
+\holding{B.S., M.S.}
+\seeking{Ph.D.}
+\degree{Doctor of Philosophy}
+\date{August 2018}
+
+% Administration
+\graduateDean{J. Larry Lyon, Ph.D.}
+\department{Department of Electrical and Computer Engineering}
+\departmentChair{Kwang Y. Lee, Ph.D.}
+
+% Supervisor (adviser / mentor)
+\supervisor{Keith Evan Schubert, Ph.D.}
+\supervisorTitle{Mentor}
+
+%  Readers (committee members)
+\readerOne{Reinhard Schulte, M.D.}
+\readerTwo{Scott Koziol, Ph.D.}
+\readerThree{Enrique Blair, Ph.D.}
+\readerFour{Lorin S. Matthews, Ph.D.}
+%\readerFive{...}
+
+% Abstract
+\abstract{Proton computed tomography ... }
+
+% Acknowledgments (optional)
+\acknowledgements{I would like to ...} 
+
+% Dedication (optional)
+\dedication{\it 
+To ...
+}
+
+
+% List of figures (optional)
+\makeListOfFigures
+
+% List of tables (optional)
+\makeListOfTables
+
+% Document body
+\begin{document}
+	\pdfbookmark[-1]{CONTENT}{bookmark:Content}  % Top level bookmark to hold all chapters
+	
+	% Chapters
+	\include{ch1}
+	\include{ch2} 
+	\include{ch3}
+	\include{ch4}
+	\include{ch5}
+	\include{ch6}
+	
+	% Appendices (optional)
+	% TODO: make the thesisAppendixPage automagic if the \begin{appendices} exists
+	\thesisAppendixPage 
+	\begin{appendices}
+		\appendix % Vaclav Cibur compile fix
+		\include{appendixA}
+		%\include{appendixB}
+	\end{appendices}
+	
+	% Bibliography
+	\bibliographystyle{unsrt} % or whatever style your department uses
+	\bibliography{thesis}
+	
+\end{document}
